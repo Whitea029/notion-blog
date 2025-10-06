@@ -27,8 +27,6 @@ motto = "太专注于未来，却没有意识到，今天正是多年前祈求�
 
 footerBottomText = "Contact: whitea0029@gmail.com"
 
-rss = true
-
 utterancesRepo = "github.com/Whitea029/notion-blog"
 
 # valine = true
@@ -38,7 +36,7 @@ utterancesRepo = "github.com/Whitea029/notion-blog"
 # waline = true
 # walineServer = ""
 
-email = ""
+email = "whitea0029@gmail.com"
 
 siteStartYear = 2023
 
@@ -49,8 +47,8 @@ favicon = "images/favicon.ico"
 
 # options
 # stickyNav = true
-# reorderNavItems = ["about", "search", "rss", "posts", "categories", "tags"]
-# collapseNavItems = ["posts", "categories", "tags"]
+reorderNavItems = ["about", "github", "posts", "categories", "tags", "mianjing", "search"]
+collapseNavItems = ["posts", "categories", "tags"]
 noDefaultSummaryCover = true
 showTableOfContents = true
 showSummaryCoverInPost = true
@@ -58,7 +56,8 @@ showSummaryCoverInPost = true
 showPrevNextPost = true
 # reorderShares = ["x", "facebook", "whatsapp"]
 
-# [params.navItems]
+[params.navItems]
+mianjing = { href = "/mianjing", title = "实习面经" }
 
 # [params.twikoo]
 # enabled = true
