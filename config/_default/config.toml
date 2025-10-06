@@ -1,4 +1,75 @@
 baseURL = "https://c2045571.notion-blog-8q9.pages.dev"
-languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "DoIt"
+defaultContentLanguage = "en"
+languageCode = "en"
+title = "Whitea's Blog"
+theme = "dream"
+
+[services]
+# [services.disqus]
+# shortname = "..."
+[services.googleAnalytics]
+ID = "G-86SCPSQBEZ"
+
+[params]
+# zenMode = true
+
+lightTheme = "nord"
+darkTheme = "abyss"
+
+# backgroundImage = "/images/wallpaper.jpg"
+# backgroundImageDark = ""
+
+author = "Whitea"
+description = "A personal tech blog sharing cutting-edge development insights, coding practices, and reflections on life — by Whitea."
+avatar = "/images/avater.png"
+headerTitle = "Hi! There's Whitea"
+motto = "太专注于未来，却没有意识到，今天正是多年前祈求的模样"
+
+footerBottomText = "Copyrigh © 2025 whitea's blog"
+
+rss = true
+
+utterancesRepo = ""
+
+# valine = true
+# LEANCLOUD_APP_ID = ""
+# LEANCLOUD_APP_KEY = ""
+
+# waline = true
+# walineServer = ""
+
+email = ""
+
+siteStartYear = 2016
+
+favicon = "images/favicon.ico"
+
+# Syntax highlighting
+# customSyntaxHighlighting = true
+
+# options
+# stickyNav = true
+# reorderNavItems = ["about", "search", "rss", "posts", "categories", "tags"]
+# collapseNavItems = ["posts", "categories", "tags"]
+noDefaultSummaryCover = true
+showTableOfContents = true
+showSummaryCoverInPost = true
+# imageZoomableInPost = true
+showPrevNextPost = true
+# reorderShares = ["x", "facebook", "whatsapp"]
+
+# [params.navItems]
+
+# [params.twikoo]
+# enabled = true
+# envID = ""
+# region = ""
+# lang = ""
+
+[params.advanced]
+customCSS = ["css/custom.css"]
+# customJS = []
+
+# [params.experimental]
+# jsDate = true
+# jsDateFormat = "yyyy年MM月dd日"
