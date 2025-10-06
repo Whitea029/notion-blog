@@ -1,9 +1,10 @@
 ---
 title: "SAST授课-从HTTP到RPC & 服务发现与注册"
 date: "2025-10-06T07:06:00.000Z"
-lastmod: "2025-10-06T07:07:00.000Z"
+lastmod: "2025-10-06T08:02:00.000Z"
 draft: false
 series: []
+日期: "2024-03-19"
 authors:
   - "Whitea"
 tags:
@@ -15,7 +16,7 @@ NOTION_METADATA:
   object: "page"
   id: "28493dc3-968c-8045-9409-dd1aeed98eee"
   created_time: "2025-10-06T07:06:00.000Z"
-  last_edited_time: "2025-10-06T07:07:00.000Z"
+  last_edited_time: "2025-10-06T08:02:00.000Z"
   created_by:
     object: "user"
     id: "102d872b-594c-81b1-ab63-0002c10e95af"
@@ -35,6 +36,13 @@ NOTION_METADATA:
       id: "B%3C%3FS"
       type: "multi_select"
       multi_select: []
+    日期:
+      id: "C%3CqD"
+      type: "date"
+      date:
+        start: "2024-03-19"
+        end: null
+        time_zone: null
     draft:
       id: "JiWU"
       type: "checkbox"
@@ -72,7 +80,7 @@ NOTION_METADATA:
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2025-10-06T07:07:00.000Z"
+      last_edited_time: "2025-10-06T08:02:00.000Z"
     summary:
       id: "x%3AlD"
       type: "rich_text"
@@ -121,7 +129,7 @@ MANAGED_BY_NOTION_HUGO: true
 大部分人无脑选择 TCP 就好了
 
 
-![](images/2025-second-class/001.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-802e-a85c-f64e0e4213ed)
 
 
 这是一种基于字节流的传输方式，就这样一个裸的TCP就可以解决我们收发数据的全部问题了么？
@@ -136,7 +144,7 @@ MANAGED_BY_NOTION_HUGO: true
 它根本不知道从哪到哪才是一条完整的消息。
 
 
-![](images/2025-second-class/002.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8089-8c63-ffdf32db8bff)
 
 
 上面这张图就是粘包问题
@@ -144,7 +152,7 @@ MANAGED_BY_NOTION_HUGO: true
 比如我们可以把消息封装一下，分为 Header 和 Body, Header 用于存放一些元数据，比如这个消息有多长， Body 用于存放真正的消息
 
 
-![](images/2025-second-class/003.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-805b-9770-c82bab0b2932)
 
 
 这样封装方式，只要收发信息的上下游约定好，这就是所谓的协议
@@ -154,7 +162,7 @@ MANAGED_BY_NOTION_HUGO: true
 ## HTTP 和 RPC
 
 
-![](images/2025-second-class/004.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-804d-97ba-c201470e22cc)
 
 - **HTTP协议**：超文本传输协议 （HTTP） 是一种用于传输超媒体文档（如 HTML）的应用层协议。它专为 Web 浏览器和 Web 服务器之间的通信而设计，但也可用于其他目的，例如机器对机器通信、对 API 的编程访问等
 - **RPC**：RPC协议是一种通过网络调用远程服务的方法，使得不同系统间可以像调用本地方法一样进行通信
@@ -168,7 +176,7 @@ MANAGED_BY_NOTION_HUGO: true
 HTTP的请求报文由四部分组成：请求行(request line)、请求头部(header)、空行和请求数据(request data)
 
 
-![](images/2025-second-class/005.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-80fe-a650-c2a4adbd8fad)
 
 
 不过 HTTP 协议不是我们今天的重点
@@ -208,7 +216,7 @@ func add(x, y int) int {
 这是一个简单的例子，那我们看一下生产项目中出现的例子
 
 
-![](images/2025-second-class/006.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8018-b611-cbd0c24cdf49)
 
 
 像这种跨服务的调用需要解决一些问题
@@ -220,7 +228,7 @@ func add(x, y int) int {
 ### RPC 概念模型
 
 
-![](images/2025-second-class/007.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8025-a9c5-ea0fef34a149)
 
 
 1984 年 Nelson 发布了论文《Implementing Remote Procedure Calls》，其中提出了 RPC 的过程由 5 个模型组成: User、User-Stub、RPC-Runtime、Server-Stub、Server
@@ -229,7 +237,7 @@ func add(x, y int) int {
 ### 一次完整的 RPC 请求过程
 
 
-![](images/2025-second-class/008.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8063-bfda-e45a2c0d5c82)
 
 - IDL(Interface Description Language)文件：通过一种中立的方式来描述接口，使得在不同平台上运行的对象和用不同语言编写的程序可以相互通信。
 - 生成代码：通过编译器把IDL文件转换成语言对应的静态库。
@@ -265,7 +273,7 @@ RPC框架常被分为三层：编解码层，协议层，网络通信层
 这里的协议我们以 Apache 的 Thrift 协议为例
 
 
-![](images/2025-second-class/009.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-80ef-9bcc-ecba977bb1f8)
 
 
 **编解码层**
@@ -274,7 +282,7 @@ RPC框架常被分为三层：编解码层，协议层，网络通信层
 编解码层需要通过IDL文件生成各种语言的代码
 
 
-![](images/2025-second-class/010.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-806e-b8f2-e9c315bafdcb)
 
 
 而它的数据格式有多种
@@ -299,7 +307,7 @@ struct Person {
 ```
 
 
-![](images/2025-second-class/011.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8014-a5b3-f89708b808d2)
 
 
 因此在 RPC 框架的编解码层的选型上往往考虑的因素是
@@ -315,11 +323,11 @@ struct Person {
 
 - 特殊的结束符号：一个特殊字符作为每个协议单元结束的标示
 
-![](images/2025-second-class/012.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-801e-8e65-fe88c60e4369)
 
 - 变长协议：由定长部分和不定长部分组成，其中定长部分要描述不定长部分内容的长度
 
-![](images/2025-second-class/013.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-808a-9ae9-ef8ed07227fa)
 
 
 **协议构造**
@@ -370,7 +378,7 @@ struct Person {
 那么框架里面怎么对我们的协议进行解析呢
 
 
-![](images/2025-second-class/014.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-804f-a647-d0b4e66d4fab)
 
 
 **网络通信层**
@@ -379,10 +387,7 @@ struct Person {
 常用的便是 Socket API
 
 
-![](images/2025-second-class/015.png)
-
-
-![](images/2025-second-class/016.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8076-a617-e57cf9aa8f92)
 
 
 框架选择合适的网路库需要考虑的因素：
@@ -412,7 +417,7 @@ struct Person {
 ### 服务注册与服务发现
 
 
-![](images/2025-second-class/017.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-808c-a952-c02ae14eb4db)
 
 - Service B 把自己注册到 Service Registry 叫做 服务注册
 - Service A 从 Service Registry 发现 Service B 的节点信息叫做 服务发现
@@ -434,15 +439,15 @@ struct Person {
 
 - 存量获取：当 Service A 启动时，需要从 Service Registry 获取 Service B 的已有节点列表：Service B1, Service B2, Service B3，然后根据自己的负载均衡算法来选择合适的节点发送请求
 
-![](images/2025-second-class/017.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-80d8-945c-e65e050ce2af)
 
 - 增量侦听：上图已经有了 Service B1, Service B2, Service B3，如果此时又启动了 Service B4，那么我们就需要通知 Service A 有个新增的节点
 
-![](images/2025-second-class/018.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8068-8df4-f9151a93e533)
 
 - 应对服务发现故障： 当服务发现系统出现故障时，通常会使用故障转移策略来确保服务的可用性。例如，如果主服务发现系统出现问题，系统可以切换到备份的服务发现实例，确保依然可以发现服务
 
-![](images/2025-second-class/019.png)
+![](https://whitea.dpdns.org/api?block_id=28493dc3-968c-8060-9083-c99ea7fa3be2)
 
 
 ### 注册中心
