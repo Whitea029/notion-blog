@@ -11,12 +11,12 @@ theme = "dream"
 ID = "G-86SCPSQBEZ"
 
 [params]
-# zenMode = true
+zenMode = true
 
-lightTheme = "nord"
-darkTheme = "abyss"
+lightTheme = "emerald"
+darkTheme = "forest"
 
-# backgroundImage = "/images/wallpaper.jpg"
+# backgroundImage = ""
 # backgroundImageDark = ""
 
 author = "Whitea"
@@ -25,11 +25,11 @@ avatar = "/images/avater.png"
 headerTitle = "Hi! There's Whitea"
 motto = "太专注于未来，却没有意识到，今天正是多年前祈求的模样"
 
-footerBottomText = "Copyrigh © 2025 whitea's blog"
+footerBottomText = "Contact: whitea0029@gmail.com"
 
 rss = true
 
-utterancesRepo = ""
+utterancesRepo = "github.com/Whitea029/notion-blog"
 
 # valine = true
 # LEANCLOUD_APP_ID = ""
@@ -40,7 +40,7 @@ utterancesRepo = ""
 
 email = ""
 
-siteStartYear = 2016
+siteStartYear = 2023
 
 favicon = "images/favicon.ico"
 
