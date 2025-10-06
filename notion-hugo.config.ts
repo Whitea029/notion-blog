@@ -1,10 +1,10 @@
 import { UserConfig } from "./src/config"
 
 const userConfig: UserConfig = {
-    base_url: "https://c2045571.notion-blog-8q9.pages.dev",
+    base_url: "https://whitea.dpdns.org",
     mount: {
         manual: false,
-        page_url: 'https://www.notion.so/Notion-Hugo-28393dc3968c81c39029f61e1863c7ae?source=copy_link',
+        page_url: 'https://www.notion.so/Whitea-s-Blog-28393dc3968c81c39029f61e1863c7ae?source=copy_link',
         pages: [
             // {
             //     page_id: '<page_id>',
