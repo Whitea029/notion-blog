@@ -1,7 +1,7 @@
 ---
 title: "golang进阶—interface、类型系统"
 date: "2025-10-06T07:53:00.000Z"
-lastmod: "2025-10-06T08:03:00.000Z"
+lastmod: "2025-10-06T08:09:00.000Z"
 draft: false
 series: []
 日期: "2025-03-01"
@@ -11,11 +11,12 @@ tags:
   - "Golang"
 categories:
   - "技术"
+Last edited time: "2025-03-01"
 NOTION_METADATA:
   object: "page"
   id: "28493dc3-968c-8005-af59-eea46a74330e"
   created_time: "2025-10-06T07:53:00.000Z"
-  last_edited_time: "2025-10-06T08:03:00.000Z"
+  last_edited_time: "2025-10-06T08:09:00.000Z"
   created_by:
     object: "user"
     id: "102d872b-594c-81b1-ab63-0002c10e95af"
@@ -78,8 +79,11 @@ NOTION_METADATA:
           color: "gray"
     Last edited time:
       id: "vbGE"
-      type: "last_edited_time"
-      last_edited_time: "2025-10-06T08:03:00.000Z"
+      type: "date"
+      date:
+        start: "2025-03-01"
+        end: null
+        time_zone: null
     summary:
       id: "x%3AlD"
       type: "rich_text"
