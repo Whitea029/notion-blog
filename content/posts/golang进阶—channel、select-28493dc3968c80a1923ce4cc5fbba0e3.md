@@ -1,8 +1,9 @@
 ---
 title: "golang进阶—channel、select"
 date: "2025-02-03"
-lastmod: "2025-10-06T08:09:00.000Z"
+lastmod: "2025-10-06T17:16:00.000Z"
 draft: false
+featuredImage: "https://whitea.dpdns.org/api?page_id=28493dc3-968c-80a1-923c-e4cc5fbba0e3"
 series: []
 authors:
   - "Whitea"
@@ -15,14 +16,41 @@ NOTION_METADATA:
   object: "page"
   id: "28493dc3-968c-80a1-923c-e4cc5fbba0e3"
   created_time: "2025-10-06T07:45:00.000Z"
-  last_edited_time: "2025-10-06T08:09:00.000Z"
+  last_edited_time: "2025-10-06T17:16:00.000Z"
   created_by:
     object: "user"
     id: "102d872b-594c-81b1-ab63-0002c10e95af"
   last_edited_by:
     object: "user"
     id: "102d872b-594c-81b1-ab63-0002c10e95af"
-  cover: null
+  cover:
+    type: "file"
+    file:
+      url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/521e321f-c2b1-43d8-8\
+        420-f4e705febb38/de6a92cb-de65-4059-95df-b342bfc2d402/1.png?X-Amz-Algor\
+        ithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Crede\
+        ntial=ASIAZI2LB466VBIXADER%2F20251006%2Fus-west-2%2Fs3%2Faws4_request&X\
+        -Amz-Date=20251006T171717Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJ\
+        b3JpZ2luX2VjEPj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIEJ\
+        kHHS29OLNHqvHD74z545SkK%2BS1gZTNxRG3koGEy6KAiEAhAr49y%2F5VzzkWF7zPG3G91\
+        9gJxGQfSFnX0vZHM%2FT7KkqiAQIkf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc\
+        0MjMxODM4MDUiDLWsz1bVvNd0pVXUMCrcA4SryB1PZgAujmqorkgWG07bGCD3BG%2BTf1ZS\
+        zdVeTI96y3RSn2J60mTuVkObN80G7Xhg2rQsGWPwpnDYD7T5al0XDjaa%2FCQ4%2Brw4uHq\
+        RU95akRanJYBE31GtqE5dFZXTIaj8%2BLc7rnB90NDBeAanjPgcy1XOe4MKerSE%2BeTG9C\
+        jLYo92DYQSe1KV2GX4tyxLWnfhFM%2FJ5nGg%2FF8EKMmfsgkK%2BbWEULoGeSdWWPTguXc\
+        YacQLbgXk0b908GNIJcvOssNCdEEuQSO3T%2FFKhlTBJWr7NdUnbu9NhAO22SlU6SncmD0K\
+        KCEMaKQ5my9nVn4RYTzqzrxrgQXlOoLR%2FkksXeDjJWA8r9JJGVU%2FFy3RVji3WSmvjVV\
+        P3Yc3GvAC%2FfcKicZv7UheeOEr6DQOTE02VsJg6EJ5atoCTx1YIsWONXNcpy1wNrStL8rR\
+        Q8ZboItF8b0Gl0NwTd5MzK59KLYWQXW%2FmIvvm6kMJsYLZyTAw4IxmiMVWya6s%2FzLIJI\
+        kChY%2FoQKpYXHiZ9KPf%2F0EWnBrqoJ1g5YPCPtjvYNHZ1DUb1VdUaUDmHR0tsqBKaoIKD\
+        r9QUsmtK83n3ooamFKM3ycrXcV4g%2FneP%2BxirfnMd43HInYk60%2BiZhIn8phhsCNMPT\
+        Jj8cGOqUBxt5WAvEdeYVFwXQ7nkMCm5SPNLs1rdUzJZQzHY%2BslkEcl1t0u4E4DhEV8h3Y\
+        SJ81IOmEt8uURjrVUpXTCc58X%2BippvNzkU3%2BBeP6ScHSLPDNscLHFPpB4ILgLRrUpn1\
+        4MMxAFzjIq5ukX7EKiK7Odmvb01NmU3b96krfcR22wqE3U9S167Ra94702y12rBlW6Nbj8Q\
+        1lJVwErldnasAntM60a4pj&X-Amz-Signature=063aafa343720f4b49202623c544cb0d\
+        8ba4a0fbedf3f2148f0ab2355fe8d14d&X-Amz-SignedHeaders=host&x-amz-checksu\
+        m-mode=ENABLED&x-id=GetObject"
+      expiry_time: "2025-10-06T18:17:17.196Z"
   icon: null
   parent:
     type: "database_id"
