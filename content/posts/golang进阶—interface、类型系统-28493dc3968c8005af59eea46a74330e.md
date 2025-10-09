@@ -1,9 +1,10 @@
 ---
 title: "golang进阶—interface、类型系统"
 date: "2025-03-01"
-lastmod: "2025-10-06T08:09:00.000Z"
+lastmod: "2025-10-08T14:07:00.000Z"
 draft: false
-series: []
+series:
+  - "Golang进阶"
 authors:
   - "Whitea"
 tags:
@@ -15,7 +16,7 @@ NOTION_METADATA:
   object: "page"
   id: "28493dc3-968c-8005-af59-eea46a74330e"
   created_time: "2025-10-06T07:53:00.000Z"
-  last_edited_time: "2025-10-06T08:09:00.000Z"
+  last_edited_time: "2025-10-08T14:07:00.000Z"
   created_by:
     object: "user"
     id: "102d872b-594c-81b1-ab63-0002c10e95af"
@@ -34,7 +35,10 @@ NOTION_METADATA:
     series:
       id: "B%3C%3FS"
       type: "multi_select"
-      multi_select: []
+      multi_select:
+        - id: "369c6ac3-c943-4d7d-b034-51dafc178ff6"
+          name: "Golang进阶"
+          color: "red"
     date:
       id: "C%3CqD"
       type: "date"

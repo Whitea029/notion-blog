@@ -1,10 +1,11 @@
 ---
 title: "golang进阶—channel、select"
 date: "2025-02-03"
-lastmod: "2025-10-06T17:28:00.000Z"
+lastmod: "2025-10-08T14:07:00.000Z"
 draft: false
 featuredImage: "https://whitea.dpdns.org/api?page_id=28493dc3-968c-80a1-923c-e4cc5fbba0e3"
-series: []
+series:
+  - "Golang进阶"
 authors:
   - "Whitea"
 tags:
@@ -16,7 +17,7 @@ NOTION_METADATA:
   object: "page"
   id: "28493dc3-968c-80a1-923c-e4cc5fbba0e3"
   created_time: "2025-10-06T07:45:00.000Z"
-  last_edited_time: "2025-10-06T17:28:00.000Z"
+  last_edited_time: "2025-10-08T14:07:00.000Z"
   created_by:
     object: "user"
     id: "102d872b-594c-81b1-ab63-0002c10e95af"
@@ -29,28 +30,28 @@ NOTION_METADATA:
       url: "https://prod-files-secure.s3.us-west-2.amazonaws.com/521e321f-c2b1-43d8-8\
         420-f4e705febb38/de6a92cb-de65-4059-95df-b342bfc2d402/1.png?X-Amz-Algor\
         ithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Crede\
-        ntial=ASIAZI2LB466XE6QBE27%2F20251006%2Fus-west-2%2Fs3%2Faws4_request&X\
-        -Amz-Date=20251006T173219Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJ\
-        b3JpZ2luX2VjEPj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQD\
-        RaZnI7P3yx2%2FdKGle2Rmd3TRut9%2FZQIsZ9RMhAa91cgIgXe6lV81PiHwnRRucY1%2FT\
-        MWZh5UFFgCAHt49ZRiDeUi0qiAQIkf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc\
-        0MjMxODM4MDUiDJt%2Ft5Q0dCCm%2FtDDICrcA1fgGosq9v2aM8R13vP5%2BCxA1MDEWIxz\
-        oHCTJC2IdeHlhrXnjLuuNNBPY3Ll80hejT9Do7DtnsimQjDQ8pfYSJiQ2VO2%2Bohk9FZq1\
-        sLPTA%2F5juhw3SLEs8SARILbu85CccxYAUm2vCrsIzCcWFkUXhTa8EJfvz43ZB4p8Wx9Kk\
-        ZHGr%2BT0GGgk4r3XJ2%2B0%2BrCs1oNvCdDIQvzJH2krQnNsweUsyDvQEFaEHcoa4%2B07\
-        twlDhA3NufCjeYOs7VHpCoo6ulaJ2Rjc51O2VVRDnZH8oUU6igEMJMgji1mOuuja34ADevf\
-        xnbD4FQ7BeLDjd5JFy90sCeZNAMXX5dtvSd92%2FTs01drMjJ%2ByiGxO5Zi%2B8G6pByN4\
-        sbPllGSnYm0bT8TiBcIo%2BWic6gbuNf%2BftorNKRhdfwKpcYDXQ2eP%2FDcsXtHVGi7eO\
-        ggr7Jf6LF4RhCvyFhCdl5ZtkfXlZ9FlxTzTNIEFMcuwXL%2F7YGRAnrsK3Wc25FS1E7IJjI\
-        p7PFUcEJPZctIxAg3jR2td9%2BMHNvVTzEGU2sPEuKjE4aSyNw%2Fu3H9CT6daLJ52OtwtK\
-        iSHCO0MGHzN2t1VB0lG1T3sqsW6ELFvi6v0vCBspbNv5QQJ9Mvp2Kl02ZMGO48isHGMPrNj\
-        8cGOqUBaqPRdjD5I18Z7rnOqAPE7L7fX0NQlJTPEolD4dR5hXwKkgjL5PbxyEKnI67w77Qr\
-        op862%2BSMMZTzbZ8vyUJjW%2FDqUY%2B8Y1zhAlrtCSlnCvdIUOWRNHIrtVwXUMQriUb%2\
-        BqAVzl3IPh%2FCciZsdX7K4uFOW2dUd9oo%2FRCrJ%2FDcAgIVNEponY2z5hepD9yx%2BjO\
-        ULfBdevudn8rHv91hjfSCfc%2F1eAASZ&X-Amz-Signature=d299cd3e12ce021447fb35\
-        f1da1ae8ee85bac42a76d007c0afcdfd312a72200a&X-Amz-SignedHeaders=host&x-a\
-        mz-checksum-mode=ENABLED&x-id=GetObject"
-      expiry_time: "2025-10-06T18:32:19.904Z"
+        ntial=ASIAZI2LB466X255IOX2%2F20251009%2Fus-west-2%2Fs3%2Faws4_request&X\
+        -Amz-Date=20251009T010558Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJ\
+        b3JpZ2luX2VjEDEaCXVzLXdlc3QtMiJHMEUCIQDUsElgx0%2FOg23FNFM8BGgluH%2F5n02\
+        J268iL%2B61NIYqfwIgSj6z9nbAlUzFQBuvytBXg0hjxVZq69iSnYAsZ80RV44qiAQIyv%2\
+        F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDEjxXOjcIlS90BSG4Cr\
+        cA1pI9C8vuZxDmOVZNVFeLDom0%2BtuPrBYQ%2BWc8PX5sRD3SsOIPE67o3YS%2BGgb3j%2\
+        BOL29tqDB7fRh4STrl%2BLP2qKiFyQVDhQXDgOYMcvpeNVSc0zA%2FRNVS3awQVOrmaeISM\
+        mIV6Mxq8O2BpvhI2Ib4aYoV3fy0xvcbfzQBEbEMRsEIqxfczI7yj5AT3bl7zky2hFpdYJRA\
+        3Y%2F0p%2BSNbxtEZh%2FsFT5HjA9KIFX%2F8f970oxDLqqiCoJEL8UVYwzIPmbWuhx9mvA\
+        IWY4zARGnHeUIqrKEGAzYDpOQoztZ2OxWBFysmuSXh33LCrPkTuAXVGtFQR5eWf5NonCuZI\
+        asQYLAr69WD8h7Us9%2BqI7bMNnkodVusxc9Ix4NimiAOTWR%2Fmp%2FJCOZMQr182XfTLr\
+        jINWEr0z%2FjDsd1GX2nkAyblmTb2DV%2BCkDK6HKB1iAhOuWmLjU3Omrq%2BKG9%2BRiiv\
+        a62iXggYnAQ8zyHfU5yWlyKnkpP%2B7zfYCv68li%2FnPoedh3dyQs1rhitZuZpGgLqKflT\
+        MJlGjT%2BJn7Dl2wP3z9clyINtGbqrvZtznJu1mV9fMo9knw1k6Aq%2Bdrf0E%2Bg4m3Oqx\
+        rKxmlf5awMy2o2etAUDQ87rPgZ9UcierY654wQlb1qMIKGnMcGOqUBBdLVW58uDZmKGwSYT\
+        hH0e%2FJC95hMq82LRQYvGn%2BuUgs9KrfixvHPkgWsM7zCTfEWWm4YjVwAMv1AaAJzHZoX\
+        RSu2rJUIBrRG0nZ5NaX4AT%2FvB8XlScsj6Ymtqy2lQBDW8hxqcspBo0yDQJSB3CrssHCHP\
+        mg%2FcdFi2D3w5pt4iidBS816ptbMOXMXX8e2cpdy69Tlo%2B8AXF26tjUo2Ow4aLoCLUNN\
+        &X-Amz-Signature=e690cdf0d1dd875bb76fe01d1efc34f9a77787150723f6d42d1ca7\
+        5ac92ba76f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=Ge\
+        tObject"
+      expiry_time: "2025-10-09T02:05:58.326Z"
   icon: null
   parent:
     type: "database_id"
@@ -62,7 +63,10 @@ NOTION_METADATA:
     series:
       id: "B%3C%3FS"
       type: "multi_select"
-      multi_select: []
+      multi_select:
+        - id: "369c6ac3-c943-4d7d-b034-51dafc178ff6"
+          name: "Golang进阶"
+          color: "red"
     date:
       id: "C%3CqD"
       type: "date"
