@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@notionhq/client':
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^5.3.0
+        version: 5.3.0
       dotenv:
         specifier: ^17.2.1
         version: 17.2.3
@@ -207,8 +207,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@notionhq/client@4.0.2':
-    resolution: {integrity: sha512-4pk3dm4umhjsRI0umCnJ8lCZh0TMiaMdkY0rz6FV4OqVuTsmYFV3pk+YTR5S8792ZY2Rm4lJHlLj05HQVKDuIg==}
+  '@notionhq/client@5.3.0':
+    resolution: {integrity: sha512-pISuJLrP6XwxnmMZ79jT2XkMHFtbQvslfs6Rqdd29ge0KAmJOuhtWZxE1WXO7h03cj/gVAL2PiAjpFuIWrWJ3w==}
     engines: {node: '>=18'}
 
   '@types/fs-extra@11.0.4':
@@ -380,7 +380,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.10':
     optional: true
 
-  '@notionhq/client@4.0.2': {}
+  '@notionhq/client@5.3.0': {}
 
   '@types/fs-extra@11.0.4':
     dependencies:
