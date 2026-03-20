@@ -1,8 +1,8 @@
 ---
 title: "LLM Tool Use 后训练研究全景：2026年3月最新论文盘点"
 date: "2026-03-19"
-lastmod: "2026-03-19T10:49:00.000Z"
-draft: false
+lastmod: "2026-03-19T11:28:00.000Z"
+draft: true
 series: []
 tags:
   - "LLM"
@@ -12,18 +12,18 @@ categories:
 summary: "梳理 2026 年 3 月 arXiv 最新一批 LLM Tool Use
   后训练研究，涵盖工具规划搜索（ToolTree）、数据多样性合成（DIVE）、安全对齐（MOSAIC）、分治框架（Tool-DC）等多个方向。"
 authors:
-  - "Blog"
+  - "Whitea"
 NOTION_METADATA:
   object: "page"
   id: "32893dc3-968c-81ba-851d-edb14ce80dff"
   created_time: "2026-03-19T10:45:00.000Z"
-  last_edited_time: "2026-03-19T10:49:00.000Z"
+  last_edited_time: "2026-03-19T11:28:00.000Z"
   created_by:
     object: "user"
     id: "90b94823-f51a-486f-9c1b-be7444b2c4f6"
   last_edited_by:
     object: "user"
-    id: "90b94823-f51a-486f-9c1b-be7444b2c4f6"
+    id: "102d872b-594c-81b1-ab63-0002c10e95af"
   cover: null
   icon: null
   parent:
@@ -47,7 +47,7 @@ NOTION_METADATA:
     draft:
       id: "JiWU"
       type: "checkbox"
-      checkbox: false
+      checkbox: true
     authors:
       id: "bK%3B%5B"
       type: "people"
@@ -76,7 +76,7 @@ NOTION_METADATA:
     Last edited time:
       id: "vbGE"
       type: "last_edited_time"
-      last_edited_time: "2026-03-19T10:49:00.000Z"
+      last_edited_time: "2026-03-19T11:28:00.000Z"
     summary:
       id: "x%3AlD"
       type: "rich_text"
