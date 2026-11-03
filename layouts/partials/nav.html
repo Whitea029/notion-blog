@@ -1,0 +1,26 @@
+<nav class="site-nav" aria-label="主导航">
+  <div class="site-nav-inner">
+    <a class="site-avatar" href="{{ site.Home.RelPermalink }}" aria-label="返回首页">
+      <img src="{{ site.Params.avatar | relURL }}" alt="Whitea" width="48" height="48" />
+    </a>
+    <div class="site-brand">
+      <a href="{{ site.Home.RelPermalink }}">{{ site.Params.headerTitle }}</a>
+      <p>{{ site.Params.motto }}</p>
+    </div>
+    <div class="site-nav-links">
+      <a href="{{ "about/" | relLangURL }}"{{ if eq .Layout "about" }} aria-current="page"{{ end }}>About</a>
+      <a class="site-search-link" href="{{ "search/" | relLangURL }}" aria-label="搜索文章" title="搜索文章"{{ if eq .Type "search" }} aria-current="page"{{ end }}>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16 16 4.5 4.5"/></svg>
+      </a>
+      <details class="site-menu">
+        <summary aria-label="更多导航" title="更多导航"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></summary>
+        <div class="site-menu-items">
+          <a href="{{ "posts/" | relLangURL }}">所有文章</a>
+          <a href="{{ "categories/" | relLangURL }}">分类</a>
+          <a href="{{ "tags/" | relLangURL }}">标签</a>
+          <a href="https://github.com/Whitea029" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>

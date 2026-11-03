@@ -1,0 +1,1 @@
+<a class="article-image-link" href="{{ .Destination | safeURL }}" data-image-preview aria-label="查看原图{{ with .PlainText }}：{{ . }}{{ end }}"><img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async" /></a>

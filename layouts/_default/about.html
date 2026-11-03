@@ -1,0 +1,15 @@
+{{ define "title" }}About{{ end }}
+{{ define "main" }}
+<main class="profile-page">
+  <article class="prose dark:prose-invert" id="dream-single-post-main">
+    <header class="profile-header">
+      <img src="{{ site.Params.avatar | relURL }}" alt="Whitea" width="80" height="80" />
+      <div><p class="page-eyebrow">ABOUT ME</p><h1>Hi，我是 Whitea</h1><p>写代码，也记录生活。</p></div>
+    </header>
+    <section id="dream-single-post-content">
+      {{ .Content }}
+      {{ with .Resources.GetMatch "me.md" }}{{ .Content }}{{ end }}
+    </section>
+  </article>
+</main>
+{{ end }}

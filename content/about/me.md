@@ -1,7 +1,7 @@
 ---
 title: Whitea
 date: 2025-10-05T21:50:15+08:00
-draft: true
+draft: false
 ---
 
 Hi，我是白茶（这不是本人真名，不过或许你会看懂的英文为什么是 whitea 了），就读于南京邮电大学计算机科学与技术专业，于2027年本科毕业。
@@ -12,7 +12,7 @@ Hi，我是白茶（这不是本人真名，不过或许你会看懂的英文为
 
 - 2024-3-至今 [南京邮电大学青柚工作室](https://qingyou.njupt.edu.cn/) 主席团兼后端负责人
 
-- 2025.7-2025.9 [杭州悦数科技（Vesoft）](https://www.yueshu.com.cn/) [Cloud 团队](cloud.nebula-graph.io) Golang 开发实习生
+- 2025.7-2025.9 [杭州悦数科技（Vesoft）](https://www.yueshu.com.cn/) [Cloud 团队](https://cloud.nebula-graph.io) Golang 开发实习生
 
 #### 技术栈
 

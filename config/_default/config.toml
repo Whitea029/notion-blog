@@ -47,17 +47,14 @@ favicon = "images/favicon.ico"
 
 # options
 # stickyNav = true
-reorderNavItems = ["about", "github", "posts", "categories", "tags", "mianjing", "search"]
+reorderNavItems = ["about", "github", "posts", "categories", "tags", "search"]
 collapseNavItems = ["posts", "categories", "tags"]
 noDefaultSummaryCover = true
 showTableOfContents = true
 showSummaryCoverInPost = true
-imageZoomableInPost = true
+imageZoomableInPost = false
 showPrevNextPost = true
 # reorderShares = ["x", "facebook", "whatsapp"]
-
-[params.navItems]
-mianjing = { href = "/mianjing", title = "实习面经" }
 
 # [params.twikoo]
 # enabled = true
@@ -67,7 +64,7 @@ mianjing = { href = "/mianjing", title = "实习面经" }
 
 [params.advanced]
 customCSS = ["css/custom.css"]
-# customJS = []
+customJS = ["js/site.js"]
 
 # [params.experimental]
 # jsDate = true

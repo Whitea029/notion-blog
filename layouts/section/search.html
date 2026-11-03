@@ -1,0 +1,24 @@
+{{ define "title" }}搜索{{ end }}
+{{ define "main" }}
+<main class="search-page" data-search-page>
+  <p class="page-eyebrow">EXPLORE THE BLOG</p>
+  <h1>搜索文章</h1>
+  <p class="page-description">从标题、正文和标签中，找一找你感兴趣的内容。</p>
+  <form class="search-form" role="search" action="{{ .RelPermalink }}">
+    <label for="post-search">搜索关键词</label>
+    <div class="search-input-row">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16 16 4.5 4.5"/></svg>
+      <input id="post-search" name="q" type="search" placeholder="试试 Go、开源、年度总结…" autocomplete="off" aria-describedby="search-status" />
+      <button type="submit">搜索</button>
+    </div>
+  </form>
+  <p id="search-status" role="status" aria-live="polite">输入关键词开始搜索，也可以浏览下方的最新文章。</p>
+  <div class="search-results" id="search-results"></div>
+  <noscript><p>请启用 JavaScript 使用全文搜索。你也可以前往<a href="{{ "posts/" | relLangURL }}">文章归档</a>浏览全部文章。</p></noscript>
+</main>
+{{ $data := slice }}
+{{ range where site.RegularPages "Type" "posts" }}
+  {{ $data = $data | append (dict "title" .Title "url" .RelPermalink "content" (.Plain | htmlUnescape) "tags" (.Params.tags | default slice) "categories" (.Params.categories | default slice) "date" (.Date.Format "2006-01-02")) }}
+{{ end }}
+<script type="application/json" id="search-data">{{ $data | jsonify | safeJS }}</script>
+{{ end }}
