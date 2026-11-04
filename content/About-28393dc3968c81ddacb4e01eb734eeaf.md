@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: "2025-10-05T13:01:00.000Z"
-lastmod: "2026-11-04T01:13:00.000Z"
+lastmod: "2026-11-04T01:35:00.000Z"
 draft: false
 authors:
   - "Whitea"
@@ -9,7 +9,7 @@ NOTION_METADATA:
   object: "page"
   id: "28393dc3-968c-81dd-acb4-e01eb734eeaf"
   created_time: "2025-10-05T13:01:00.000Z"
-  last_edited_time: "2026-11-04T01:13:00.000Z"
+  last_edited_time: "2026-11-04T01:35:00.000Z"
   created_by:
     object: "user"
     id: "102d872b-594c-81b1-ab63-0002c10e95af"
@@ -45,28 +45,32 @@ NOTION_METADATA:
   url: "https://app.notion.com/p/About-28393dc3968c81ddacb4e01eb734eeaf"
   public_url: null
   archived: false
-  request_id: "a8576f4e-1b7f-4c1a-af9f-3738fcacf6a6"
+  request_id: "57ce65da-22ba-4745-ae6f-cff922c2a1fc"
 MANAGED_BY_NOTION_HUGO: true
 
 ---
 
 
-Hi，我是白茶（这不是本人真名，不过或许你会看懂的英文为什么是 whitea 了），就读于南京邮电大学计算机科学与技术专业，于2027年本科毕业。
+Hi，我是 Whitea（也可以叫我 yiheng），2027年本科毕业于南京邮电大学计算机科学与技术专业。
 
 
 ### 工作经历
 
-- 2025.10-至今 [腾讯IEG互动娱乐事业群](https://www.tencentgames.com/index.html) 后台开发实习生
-- 2024-3-至今 [南京邮电大学青柚工作室](https://qingyou.njupt.edu.cn/) 主席团兼后端负责人
+- 2026.01-2026.11 [腾讯WXG微信事业群 ](https://open.weixin.qq.com/)应用研究实习生
+- 2025.10-2025-12 [腾讯IEG互动娱乐事业群](https://www.tencentgames.com/index.html) 后台开发实习生
 - 2025.7-2025.9 [杭州悦数科技（Vesoft）](https://www.yueshu.com.cn/) [Cloud 团队](https://cloud.nebula-graph.io/) Golang 开发实习生
+- 2024-3-至今 [南京邮电大学青柚工作室](https://qingyou.njupt.edu.cn/) 主席团兼后端负责人
 
 ### 技术栈
 
 
-后端开发的主流技术栈，对 Java 和 Golang 的生态相对熟悉，同时对云原生有一定了解，有一定过 K8s 开发经验
+大一大二无论在校还是实习主要积累服务端、云原生等工程相关经验
 
 
-同时也在积极学习计算机基础、前端、AI Agent 开发的相关知识
+大三后开始深入学习 Agent、Agentic RL，关注 General Agent ToolCall 领域
+
+
+熟悉语言 Golang，Python 等
 
 
 ### 一些爱好
@@ -78,18 +82,18 @@ Hi，我是白茶（这不是本人真名，不过或许你会看懂的英文为
 喜欢打篮球、羽毛球，同时也关注一些羽毛球赛事
 
 
-挺喜欢摄影的，但仍然没有一台自己的相机，但也在计划中了
+偶尔拍照，第一台相机是实习攒钱买的 Sony A7M3
 
 
 ### 交流
-
-
-本人性格随和开朗，也很爱说话，在学习后端开发的道路上也有些属于自己的心得和想法，如果你也在寻找后端开发的实习或者从事相关计算机工作，真的非常欢迎添加我的私人联系方式，很期待和你一起交流学习，一起进步！
 
 
 > whitea 全网同名
 
 - QQ: 1664915115
 - WeChat: whitea_hyh
-- Email: whitea0029@gmail.com
-- Telegram: https://t.me/Whitea029
+- X：[https://x.com/yihenghu210626](https://x.com/yihenghu210626)
+- RedNote: [https://xhslink.com/m/As4uF6DCkO](https://xhslink.com/m/As4uF6DCkO)
+- Github: [https://github.com/Whitea029](https://github.com/Whitea029)
+- Email: [mailto:whitea0029@gmail.com](mailto:whitea0029@gmail.com)
+- Telegram: [https://t.me/Whitea029](https://t.me/Whitea029)
