@@ -1,14 +1,14 @@
-{{ define "title" }}About{{ end }}
+{{ define "title" }}{{ with partial "notion-page.html" . }}{{ .Title }}{{ end }}{{ end }}
 {{ define "main" }}
+{{ $source := partial "notion-page.html" . }}
 <main class="profile-page">
   <article class="prose dark:prose-invert" id="dream-single-post-main">
     <header class="profile-header">
       <img src="{{ site.Params.avatar | relURL }}" alt="Whitea" width="80" height="80" />
-      <div><p class="page-eyebrow">ABOUT ME</p><h1>Hi，我是 Whitea</h1><p>写代码，也记录生活。</p></div>
+      <div><p class="page-eyebrow">ABOUT ME</p><h1>{{ with $source }}{{ .Title }}{{ end }}</h1></div>
     </header>
     <section id="dream-single-post-content">
-      {{ .Content }}
-      {{ with .Resources.GetMatch "me.md" }}{{ .Content }}{{ end }}
+      {{ with $source }}{{ .Content }}{{ end }}
     </section>
   </article>
 </main>

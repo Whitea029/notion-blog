@@ -1,0 +1,18 @@
+{{- $pageID := replace (.Params.notionPageID | default "") "-" "" -}}
+{{- $source := false -}}
+{{- if not $pageID -}}
+  {{- errorf "Page %s requires a notionPageID in its front matter" .RelPermalink -}}
+{{- else -}}
+  {{- range site.RegularPages -}}
+    {{- $page := . -}}
+    {{- with .Params.notion_metadata -}}
+      {{- if eq (replace (.id | default "") "-" "") $pageID -}}
+        {{- $source = $page -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $source -}}
+  {{- errorf "Notion page %s for %s was not found. Check the Notion connection, sync the page, and ensure it is published." $pageID .RelPermalink -}}
+{{- end -}}
+{{- return $source -}}

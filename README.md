@@ -183,3 +183,11 @@ on:
 ### How do I manually sync with Notion?
 
 You can trigger the CD workflow manually by navigating to the **Actions** tab in your repository, then click the **CD** workflow, then click the **Run workflow** button to trigger the workflow.
+
+### How do I edit the About page?
+
+Edit the [About child page](https://www.notion.so/28393dc3968c81ddacb4e01eb734eeaf) inside the Notion blog home. Its title and body are used at `/about/` after synchronization and deployment. You can also trigger an update with the local `$blog-update` skill.
+
+`content/about/index.md` selects the source through `notionPageID`. The Hugo template resolves the synchronized page by its Notion metadata, so changing its title or generated filename keeps the connection intact. Keep the source accessible to the Notion integration and included in the configured mounts. If it is missing or unpublished, the build fails with a diagnostic instead of silently publishing stale local content.
+
+`content/about/me.md` is retained as the previous local introduction; it is no longer rendered. The avatar remains configured in `config/_default/config.toml`.
